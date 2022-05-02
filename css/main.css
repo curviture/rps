@@ -46,6 +46,7 @@ body * {
 }
 
 .app {
+  height: 100%;
 }
 
 .app__wrapper {
@@ -75,13 +76,10 @@ body * {
   margin-bottom: 6.2rem;
 }
 
-.info__suits {
-  /* display: flex; */
-  /* flex-flow: column nowrap; */
-  /* justify-content: center; */
-  /* align-items: start; */
-  /* font-size: 3.8rem; */
-  vertical-align: top;
+.info__suits img{
+  /* width: 8rem; */
+  height: 4.3rem;
+  height: auto;
 }
 
 .info__suit {
@@ -487,6 +485,9 @@ body * {
 }
 
 @media (max-width: 35rem) {
+
+
+
   .app__wrapper {
     padding-top: 2.8rem;
   }
@@ -501,6 +502,10 @@ body * {
     padding-right: 1rem;
     border-width: 3px;
     margin-bottom: 10.2rem;
+  }
+
+  .info__suits img{
+    width: 8rem;
   }
 
   .score {
@@ -521,10 +526,6 @@ body * {
   .info__suit {
     font-size: 2rem;
     line-height: 1.6rem;
-  }
-
-  .gamescreen--player {
-    height: 23rem;
   }
 
   .gamescreen--player {
@@ -566,4 +567,58 @@ body * {
     justify-content: center;
   }
 
+  .gamescreen--computer__large {
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    justify-content: space-between;
+    width: 34rem;
+  }
+
+  .gamescreen__action {
+    order: 3;
+    flex-basis: 100%;
+    margin-top: 6.6rem;
+  }
+
+  .gamescreen__button {
+    font-size: 1.4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .gamescreen__result {
+    font-size: 6rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .choice {
+    flex-flow: column-reverse nowrap;
+    flex-basis: 50%;
+  }
+
+  .choice__label {
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+  }
+
+  .gamescreen--computer .suit,
+  .gamescreen--computer__large .suit {
+    width: 13rem;
+    height: 13rem;
+  }
+
+
+
+  .gamescreen--computer .suit__icon,
+  .gamescreen--computer__large .suit__icon {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .choice--player.WIN .suit,
+  .choice--computer.LOSE .suit {
+    box-shadow: 0 0 0rem 3rem rgba(255, 255, 255, 0.05),
+      0 0 0rem 6rem rgba(255, 255, 255, 0.025),
+      0 0 0rem 9rem rgba(255, 255, 255, 0.012);
+  }
 }
