@@ -83,15 +83,15 @@ function RulesModal(props) {
         <div class="modal__head">
           <h2 class="modal__heading">Rules</h2>
           <a  class="modal__closer" onClick=${props.clickHandler} style=${window.innerWidth > 550 ? 'display: block' : 'display: none'}>
-            <img src="images/icon-close.svg"/>
+            <img src="images/icon-close.svg" alt="modal close icon"/>
           </a>
         </div>
         <div class="modal__body">
-          <img src="./images/image-rules.svg"/>
+          <img src="./images/image-rules.svg" alt="game rules"/>
         </div>
         <div class="modal__footer">
           <a  class="modal__closer" onClick=${props.clickHandler} style=${window.innerWidth < 550 ? 'display: block' : 'display: none'}>
-            <img src="images/icon-close.svg"/>
+            <img src="images/icon-close.svg" alt="modal close icon"/>
           </a>
         </div>
       </div>
@@ -189,7 +189,7 @@ class App extends Component {
         <div class="app__wrapper">
           <div class="info">
             <div class="info__suits">
-              <img src="images/logo.svg"/>
+              <img src="images/logo.svg" alt="game logo image"/>
             </div>
             <${Score} score="${this.state.score}" />
           </div>
@@ -207,14 +207,14 @@ class App extends Component {
                 />`}
           </div>
         </div>
-        <div class="footer">
+        <footer role="footer" class="footer">
           <button class="footer__button  footer__button--save" onclick="${this.gameSave}">
             save
           </button>
           <button class="footer__button" onClick=${this.modalTrigger}>Rules</button>
         </div>
         <${RulesModal} active="${this.state.rulesModalActive}" clickHandler=${this.modalTrigger}/>
-      </div>
+        </footer>
     `;
   }
 }
